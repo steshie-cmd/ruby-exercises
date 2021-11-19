@@ -1,0 +1,5 @@
+dictionary = ["house", "car", "building", "car", "laptop", "house"]
+def substrings(word, dictionary)
+  dictionary.count(word)
+end
+substrings("car", dictionary)
