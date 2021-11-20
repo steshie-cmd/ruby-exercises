@@ -1,5 +1,13 @@
-dictionary = ["house", "car", "building", "car", "laptop", "house"]
-def substrings(word, dictionary)
-  dictionary.count(word)
+dictionary = ["Nairobi", "Kisumu", "Mombasa", "Nakuru", "Kericho", "Nairobi", "Mombasa", "Meru", "Nakuru", "Nakuru", "Nairobi", "Nairobi"]
+sentence = "Can I come to Nairobi"
+
+def substrings(sentence, dictionary)
+  new_hash = Hash.new
+  separated_words = sentence.split
+  frequency = separated_words.map {|word| dictionary.count(word)}  
+  unique_words = separated_words.map {|word| word} 
+  new_hash[unique_words] = frequency
+  puts new_hash
 end
-substrings("car", dictionary)
+
+substrings(sentence, dictionary)
